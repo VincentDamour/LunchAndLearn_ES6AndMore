@@ -1,0 +1,11 @@
+//math.js
+export function sum (x, y) { return x + y }
+export const pi = 3.141593
+
+//rectangle.js
+export default class Rectangle { ... }
+
+//app.js
+import { sum, pi } from "./math";
+import * as math from "./math";
+import Rectangle from "./rectangle";

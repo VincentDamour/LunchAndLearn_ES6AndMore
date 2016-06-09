@@ -1,0 +1,15 @@
+const x = 3;
+const y = 5;
+const point = { x, y };
+
+//ES5
+var point = { x: x, y: y };
+
+//Autres exemples
+const random = {
+    name: "Vincent",
+    shape: "circle",
+    number: 3,
+    car: { color: "red", engine: "V8" }
+};
+const { number, car: engine } = random;

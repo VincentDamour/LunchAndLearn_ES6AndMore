@@ -1,0 +1,8 @@
+copyAnimal = ({ name, …otherProps }) => {
+    return { name: `copy of ${name}`, …otherProps };
+}
+
+const dog = { name: "Rex", color: "black", gender: "female" };
+const copiedDog = copyAnimal(dog);
+console.log(copiedDog.name); //copy of Rex
+console.log(copiedDog.color); //Black

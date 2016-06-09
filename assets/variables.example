@@ -1,0 +1,8 @@
+const name = "Vincent";
+name = "Un autre nom"; //Erreur
+
+
+for (let value of [10, 20, 30]) {
+  console.log(value); //OK
+}
+console.log(value); //Erreur

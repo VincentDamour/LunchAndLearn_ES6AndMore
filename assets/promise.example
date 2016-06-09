@@ -1,0 +1,17 @@
+msgAfterTimeout = (msg, who, timeout) => {
+    return new Promise((resolve, reject) => {
+        setTimeout(() => resolve(`${msg} Hello ${who}!`), timeout)
+    })
+}
+msgAfterTimeout("", "Foo", 100).then((msg) =>
+    return msgAfterTimeout(msg, "Bar", 200)
+).then((msg) => {
+    console.log(`done after 300ms:${msg}`)
+})
+
+//multiple
+Promise.all([promise1, promise2, promise3]).then((data) => {
+    //success
+}, (error) => {
+    //error
+})
