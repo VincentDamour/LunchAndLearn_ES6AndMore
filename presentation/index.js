@@ -9,7 +9,8 @@ import {
     List,
     Slide,
     Spectacle,
-    Text
+    Text,
+    Code
 } from "spectacle";
 
 import createTheme from "spectacle/lib/themes/default";
@@ -163,6 +164,41 @@ export default class Presentation extends React.Component {
                             lang="jsx"
                             source={require("raw!../assets/promise.example")}
                             margin="20px auto" />
+                    </Slide>
+
+                    <Slide transition={["slide"]} bgColor="primary">
+                        <Heading size={2} textColor="black" textFont="primary">Generator</Heading>
+                        <CodePane textSize="0.8em" lang="jsx" source={require("raw!../assets/generator.example")} margin="20px auto" />
+                        <Appear>
+                            <div>
+                                <Code textSize="1em" bgColor="white">const generator = numbers();</Code>
+                                <Appear><Code textSize="1em" bgColor="white">{"  {}"}</Code></Appear>
+                            </div>
+                        </Appear>
+                        <Appear>
+                            <div>
+                                <Code textSize="1em" bgColor="white">generator.next();</Code>
+                                <Appear><Code textSize="1em" bgColor="white">{'{"value":2, "done":false}'}</Code></Appear>
+                            </div>
+                        </Appear>
+                        <Appear>
+                            <div>
+                                <Code textSize="1em" bgColor="white">generator.next();</Code>
+                                <Appear><Code textSize="1em" bgColor="white">{'{"value":null, "done":true}'}</Code></Appear>
+                            </div>
+                        </Appear>
+                        <Appear>
+                            <div>
+                                <Code textSize="1em" bgColor="white">generator.next(10);</Code>
+                                <Appear><Code textSize="1em" bgColor="white">{'{"value":30, "done":true}'}</Code></Appear>
+                            </div>
+                        </Appear>
+                        <Appear>
+                            <div>
+                                <Code textSize="1em" bgColor="white">generator.next();</Code>
+                                <Appear><Code textSize="1em" bgColor="white">{'{"done":true}'}</Code></Appear>
+                            </div>
+                        </Appear>
                     </Slide>
 
                     <Slide transition={["slide"]} bgColor="primary">

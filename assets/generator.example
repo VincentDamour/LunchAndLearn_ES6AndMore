@@ -1,0 +1,4 @@
+function *numbers() {
+    const result = 1 + 1;
+    return 20 + (yield result);
+}
