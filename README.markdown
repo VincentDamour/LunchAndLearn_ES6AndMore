@@ -2,7 +2,7 @@
 
 ## Link
 
-http://funny-vince.github.io/LunchAndLearn_ES6AndMore
+http://vincentdamour.github.io/LunchAndLearn_ES6AndMore
 
 ## Reference
 
